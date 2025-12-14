@@ -1,8 +1,12 @@
-import java.util.*;
+//SAAVEDRA
+
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Locale;
 
-//SANTIAGO
-
+// ============================================================
+// FEATURE 2: Maintenance Car (SANTIAGO, IVONE, FREYRA, BARCELLANO)
+// ============================================================
 class MaintenanceCar extends Car {
     private ArrayList<String> maintenanceHistory;
     private double totalMaintenanceCost;
@@ -15,9 +19,6 @@ class MaintenanceCar extends Car {
         this.lastServiceDate = "Never";
     }
 
-    //IVONE
-
-    // Add maintenance record (Abstraction - hides internal list management)
     public void addMaintenance(String service, double cost, String date) {
         String record = date + " - " + service + " ($" + cost + ")";
         maintenanceHistory.add(record);
@@ -25,9 +26,6 @@ class MaintenanceCar extends Car {
         lastServiceDate = date;
     }
 
-    //FREYRA
-
-    // Calculate service recommendation based on mileage (Abstraction)
     public String getServiceRecommendation() {
         double mileage = getMileage();
         if (mileage >= 100000) {
@@ -39,8 +37,6 @@ class MaintenanceCar extends Car {
         }
         return "No service needed yet";
     }
-
-    //BARCELLANO
 
     public void recordTrip(double distanceTraveled) {
         updateMileage(getMileage() + distanceTraveled);

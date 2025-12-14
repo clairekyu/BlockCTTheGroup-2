@@ -1,34 +1,30 @@
-import java.util.*;
-import java.text.NumberFormat;
+//LOPEZ
 
-//CORONA
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Locale;
+
 class PerformanceTracker extends Employee {
-    private int performanceScore; // 0-100
+    private int performanceScore;
     private ArrayList<String> achievements;
 
     public PerformanceTracker(int id, String name, double salary) {
         super(id, name, salary);
-        this.performanceScore = 50; // Default score
+        this.performanceScore = 50;
         this.achievements = new ArrayList<>();
     }
 
-    //LOPEZ
-
-    // Calculate bonus based on performance (Abstraction - hides complex calculation)
     public String calculateBonus() {
         double rawSalary = getRawSalary();
-        double bonusPercentage = performanceScore / 100.0 * 0.2; // Max 20% bonus
+        double bonusPercentage = performanceScore / 100.0 * 0.2;
         double bonus = rawSalary * bonusPercentage;
-
         NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
         return formatter.format(bonus);
     }
 
-    //LIM
-
     public void addAchievement(String achievement) {
         achievements.add(achievement);
-        performanceScore = Math.min(100, performanceScore + 5); // Increase score
+        performanceScore = Math.min(100, performanceScore + 5);
     }
 
     public void setPerformanceScore(int score) {
@@ -37,10 +33,6 @@ class PerformanceTracker extends Employee {
 
     public int getPerformanceScore() {
         return performanceScore;
-    }
-
-    public ArrayList<String> getAchievements() {
-        return new ArrayList<>(achievements); // Return copy for encapsulation
     }
 
     public String getPerformanceReport() {

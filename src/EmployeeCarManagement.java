@@ -1,6 +1,8 @@
+//LIM
+
 import java.util.*;
 
-//LIM
+
 
 public class EmployeeCarManagement {
     public static void main(String[] args) {
@@ -32,19 +34,6 @@ public class EmployeeCarManagement {
 
         car1.setYear(2021);
         System.out.println("\nAfter year update: " + car1);
-
-
-        System.out.println("EMPLOYEE PERFORMANCE TRACKING");
-
-        PerformanceTracker tracker = new PerformanceTracker(201, "Alice Johnson", 85000);
-        tracker.addAchievement("Completed major project ahead of schedule");
-        tracker.addAchievement("Mentored 3 junior developers");
-        tracker.setPerformanceScore(85);
-
-        System.out.println(tracker.getPerformanceReport());
-
-
-        System.out.println("CAR MAINTENANCE TRACKING");
 
 
         MaintenanceCar mainCar = new MaintenanceCar("Honda", "Civic", 2019, 35000);

@@ -1,4 +1,5 @@
-//SAAVEDRA
+
+//CORONA
 
 class Car {
     // Private instance variables (Encapsulation)
@@ -42,7 +43,7 @@ class Car {
         this.year = year;
     }
 
-    // Getter for mileage (read-only access)
+    // Getter ONLY for mileage (read-only access)
     public double getMileage() {
         return mileage;
     }
