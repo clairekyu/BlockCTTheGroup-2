@@ -54,6 +54,6 @@ class InsuranceCar extends Car {
                 "Expiry Date: " + expiryDate + "\n" +
                 "Days Until Expiry: " + daysUntilExpiry() + " days\n" +
                 "Annual Premium: " + formatter.format(calculatePremium()) + "\n" +
-                (daysUntilExpiry() < 30 ? "WARNING: Insurance expiring soon!" : "✓ Insurance valid");
+                (daysUntilExpiry() < 30 ? "WARNING: Insurance expiring soon!" : "Insurance valid");
     }
 }

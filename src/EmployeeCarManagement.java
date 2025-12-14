@@ -19,15 +19,12 @@ public class EmployeeCarManagement {
         System.out.println("\nAfter name change: " + emp1);
 
 
-        System.out.println("BASIC CAR CLASS");
-
-
         Car car1 = new Car("Toyota", "Camry", 2020, 45000);
         System.out.println("Created: " + car1);
         System.out.println("Company: " + car1.getCompanyName());
         System.out.println("Model: " + car1.getModelName());
         System.out.println("Year: " + car1.getYear());
-        System.out.println("Mileage: " + car1.getMileage() + " km (read-only)");
+        System.out.println("Mileage: " + car1.getMileage());
 
         car1.setYear(2021);
         System.out.println("\nAfter year update: " + car1);

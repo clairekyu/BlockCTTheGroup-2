@@ -4,9 +4,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
-// ============================================================
-// FEATURE 2: Maintenance Car (SANTIAGO, IVONE, FREYRA, BARCELLANO)
-// ============================================================
+
 class MaintenanceCar extends Car {
     private ArrayList<String> maintenanceHistory;
     private double totalMaintenanceCost;
